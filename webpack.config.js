@@ -28,4 +28,12 @@ module.exports = {
       },
     ],
   },
+  stats: {
+    colors: true,
+    version: false,
+    hash: false,
+    timings: false,
+    chunks: false,
+    chunkModules: false,
+  },
 };

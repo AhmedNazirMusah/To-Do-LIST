@@ -1,32 +1,31 @@
-// import _ from 'lodash';
 import './style.css';
+import addBook from './addbook.js';
+import {
+  deletefun, todolist, forms, input,
+} from './delete.js';
 
-const List = [
-  {
-    description: 'first-task',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'second-task',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'third-task',
-    completed: true,
-    index: 3,
-  },
-];
+const populate = () => {
+  todolist.forEach((item, id) => {
+    forms.innerHTML += `<div class="todo-form-group r-div" id="${id}">
+      <div class="i-div">
+      <label for="${id}" id="${id}">
+        <input id="${id}" type="checkbox" class="box">
+        <input id="${id}" type="text" readonly placeholder="${item.description}" class="place-input">
+      </label>
+      </div>
+      <i class="fa-solid fa-arrows-to-dot"></i>
+    </div>`;
+  });
+};
 
-const forms = document.querySelector('.todo-form');
-
-List.forEach((item) => {
-  forms.innerHTML += `<div class="todo-form-group r-div ${item.index}">
-  <div>
-  <input class="checkbox" type="checkbox">
-  <label>${item.description}</label>
-  </div>
-  <i class="fa-solid fa-arrows-to-dot"></i>
-</div>`;
+populate();
+input.addEventListener('keyup', (e) => {
+  const userInput = input.value;
+  if (e.key === 'Enter' && userInput) {
+    if (input.value !== '') {
+      addBook();
+    }
+  }
 });
+
+deletefun();

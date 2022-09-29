@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-DO-list</title>
-<script defer src="runtime.js"></script><script defer src="index.js"></script></head>
-<body>
-    <h1>Hello</h1>
-</body>
+    <script
+      src="https://kit.fontawesome.com/5190cd248e.js"
+      crossorigin="anonymous"
+    ></script>
+  <script defer src="runtime.js"></script><script defer src="index.js"></script></head>
+  <body>
+    <main>
+      <div class="todo-list">
+        <div class="todo-header">
+          <div class="todo-title">
+            <h3>Today's To-DO</h3>
+            <a href="#"><i class="fa-solid fa-arrows-rotate"></i></a>
+          </div>
+            <label >
+              <input
+                class="todo-input"
+                type="text"
+                placeholder="add to your list"
+              />
+            </label>
+          </div>
+          <div class="todo-body">
+            <div class="todo-form">
+              <!-- <div class="todo-form-group r-div" id="${item.id}">
+                <div class="i-div">
+                <label for="2">
+                  <input id="2" type="checkbox">
+                  <p>${item.description}</p>
+                </label>
+                </div>
+                <i class="fa-solid fa-arrows-to-dot"></i>
+              </div> -->
+            </div>
+            <button type="submit" class="submit">Clear all completed</button>
+          </div>
+      </div>
+    </main>
+  </body>
 </html>
