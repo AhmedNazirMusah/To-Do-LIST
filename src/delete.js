@@ -1,4 +1,4 @@
-let todolist = JSON.parse(localStorage.getItem('list')) || [];
+const todolist = JSON.parse(localStorage.getItem('list')) || [];
 export const forms = document.querySelector('.todo-form');
 export const input = document.querySelector('.todo-input');
 export const clear = document.querySelector('.submit');
@@ -32,8 +32,8 @@ const deletefun = () => {
 };
 
 clear.addEventListener('click', () => {
-  todolist = todolist.filter((books) => books.completed === false);
-  localStorage.setItem('list', JSON.stringify(todolist));
+  const updated = todolist.filter((books) => books.completed === false);
+  localStorage.setItem('list', JSON.stringify(updated));
   window.location.reload();
 });
 

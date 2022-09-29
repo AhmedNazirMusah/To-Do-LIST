@@ -31,6 +31,7 @@
 .todo-form {
   display: flex;
   flex-direction: column;
+
   /* gap: 16px; */
   list-style: none;
 }
@@ -62,6 +63,10 @@ button:hover {
   align-items: center;
 }
 
+label {
+  width: 80%;
+}
+
 .i-div label {
   display: flex;
   column-gap: 15px;
@@ -83,8 +88,4 @@ button:hover {
 .place-input:hover {
   background-color: bisque;
   transition: 0.5s all ease-in-out;
-}
-
-label {
-  width: 80%;
 }
