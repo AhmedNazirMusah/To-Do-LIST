@@ -13,6 +13,7 @@ const populate = () => {
         <input id="${id}" type="text" readonly placeholder="${item.description}" class="place-input">
       </label>
       </div>
+      <i id="${id}" class="fa-solid fa-trash del" name="deleted"></i>
       <i class="fa-solid fa-arrows-to-dot"></i>
     </div>`;
   });

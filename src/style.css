@@ -59,7 +59,7 @@ button:hover {
 .r-div {
   grid-gap: 3%;
   display: grid;
-  grid-template-columns: 90% 5%;
+  grid-template-columns: 85% 5% 5%;
   align-items: center;
 }
 
@@ -88,4 +88,8 @@ label {
 .place-input:hover {
   background-color: bisque;
   transition: 0.5s all ease-in-out;
+}
+
+.del:hover {
+  color: brown;
 }

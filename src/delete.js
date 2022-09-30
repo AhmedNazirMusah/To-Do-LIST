@@ -29,10 +29,21 @@ const deletefun = () => {
       localStorage.setItem('list', JSON.stringify(todolist));
     });
   });
+
+  const singledelete = document.querySelectorAll('.del');
+  const itemz = [...singledelete];
+  itemz.forEach((deletebtn) => {
+    deletebtn.addEventListener('click', () => {
+      todolist[deletebtn.id].completed = true;
+      const onedelete = todolist.filter((todo) => todo.completed === false);
+      localStorage.setItem('list', JSON.stringify(onedelete));
+      window.location.reload();
+    });
+  });
 };
 
 clear.addEventListener('click', () => {
-  const updated = todolist.filter((books) => books.completed === false);
+  const updated = todolist.filter((todo) => todo.completed === false);
   localStorage.setItem('list', JSON.stringify(updated));
   window.location.reload();
 });
