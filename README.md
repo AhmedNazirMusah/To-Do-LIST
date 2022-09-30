@@ -38,7 +38,7 @@ Write a function to iterate over the tasks array and populate an HTML list item 
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions, issues, and feature requests are highly welcomed!
 
 Feel free to check the [issues page](../../issues/).
 
