@@ -1,9 +1,10 @@
 import './style.css';
-import addBook from './addbook.js';
+import addTodo from './todo.js';
 import {
-  deletefun, todolist, forms, input,
+  deletefun, todolist, input,
 } from './delete.js';
 
+const forms = document.querySelector('.todo-form');
 const populate = () => {
   todolist.forEach((item, id) => {
     forms.innerHTML += `<div class="todo-form-group r-div" id="${id}">
@@ -20,13 +21,16 @@ const populate = () => {
 };
 
 populate();
+
 input.addEventListener('keyup', (e) => {
   const userInput = input.value;
   if (e.key === 'Enter' && userInput) {
     if (input.value !== '') {
-      addBook();
+      addTodo();
     }
   }
 });
 
 deletefun();
+
+export default populate;
