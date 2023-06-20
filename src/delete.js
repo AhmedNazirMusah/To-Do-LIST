@@ -1,6 +1,7 @@
 const todolist = JSON.parse(localStorage.getItem('list')) || [];
 export const input = document.querySelector('.todo-input');
 export const clear = document.querySelector('.submit');
+import populate from "./index.js";
 
 const deletefun = () => {
   if (todolist[0] === null) return;
@@ -12,7 +13,7 @@ const deletefun = () => {
   });
   edit.forEach((trigger) => {
     trigger.addEventListener('keyup', (e) => {
-      if (e.key === 'Enter') {
+      if (e.key === 'Enter' && trigger.value !== '') {
         todolist[trigger.id].description = trigger.value;
         localStorage.setItem('list', JSON.stringify(todolist));
         window.location.reload();
