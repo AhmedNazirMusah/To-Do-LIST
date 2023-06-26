@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://ahmednazirmusah.github.io/To-Do-LIST/dist/)
+[Live Demo Link](https://your1todolists.netlify.app/)
 
 
 ## Getting Started
